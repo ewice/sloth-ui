@@ -1,0 +1,17 @@
+{
+  "name": "storybook-host",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/storybook-host/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "storybook": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "configDir": "apps/storybook-host/.storybook",
+        "disableTelemetry": true,
+        "port": 4400
+      }
+    }
+  }
+}
