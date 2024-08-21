@@ -1,7 +1,0 @@
-{
-  "name": "@sloth-ui/components",
-  "version": "0.0.1",
-  "dependencies": {},
-  "main": "./index.cjs",
-  "module": "./index.js"
-}
