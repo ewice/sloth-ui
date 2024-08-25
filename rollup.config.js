@@ -2,8 +2,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import summary from 'rollup-plugin-summary';
 import typescript from '@rollup/plugin-typescript';
-import css from 'rollup-plugin-import-css';
 import terser from '@rollup/plugin-terser';
+import css from 'rollup-plugin-import-css';
 
 export default {
   input: 'src/components.ts',
@@ -17,8 +17,9 @@ export default {
     }
   },
   plugins: [
+    css(),
     typescript(),
-    replace({preventAssignment: false, 'Reflect.decorate': 'undefined'}),
+    replace({ preventAssignment: false, 'Reflect.decorate': 'undefined' }),
     resolve(),
     terser({
       ecma: 2021,
@@ -31,6 +32,5 @@ export default {
       },
     }),
     summary(),
-    css(),
   ],
 };

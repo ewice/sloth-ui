@@ -1,10 +1,10 @@
-import {html, LitElement, unsafeCSS} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
-import styles from './button.css';
+import { html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import styles from './button.css' with { type: 'css' };
 
 @customElement('sloth-button')
 export class Button extends LitElement {
-  static override styles = unsafeCSS(styles);
+  static override styles = [styles];
 
   @property()
   name = 'World';
